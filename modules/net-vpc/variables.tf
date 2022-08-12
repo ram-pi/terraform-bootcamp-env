@@ -1,14 +1,7 @@
-variable "gcp_project" {
-  type    = string
-  default = "solutionsarchitect-01"
-}
+variable "region" {}
 
-variable "gcp_region" {
-  type    = string
-  default = "europe-west8"
-}
+variable "cidr" {}
 
-variable "gcp_zone" {
-  type    = string
-  default = "europe-west8-a"
-}
+variable "subnet" {}
+
+variable "net" {}

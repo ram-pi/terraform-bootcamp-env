@@ -36,3 +36,9 @@ terraform.rc
 # Ignore trunk linters config
 **/.trunk/*
 environments/bootcamp-1/.terraform.lock.hcl
+
+# ignore local environment
+environments/local
+.DS_Store
+*.dot
+*.out
