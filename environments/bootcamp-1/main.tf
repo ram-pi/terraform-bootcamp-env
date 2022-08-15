@@ -78,6 +78,13 @@ resource "null_resource" "jumphost" {
   // upload samba pem on jumphost
   provisioner "file" {
     source      = "./${var.samba_name}.pem"
-    destination = "~/${var.samba_name}.pem"
+    destination = "${var.samba_name}.pem"
+
+  }
+
+  provisioner "remote-exec" {
+    inline = [
+      "chmod 600 ${var.samba_name}.pem"
+    ]
   }
 }

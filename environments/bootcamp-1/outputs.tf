@@ -25,3 +25,7 @@ output "personal_ip" {
 output "samba_internal_ip" {
   value = module.samba.internal_ip
 }
+
+output "gcp_user" {
+  value = split("@", data.google_client_openid_userinfo.userinfo.email)[0]
+}

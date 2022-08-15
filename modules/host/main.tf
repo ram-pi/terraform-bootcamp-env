@@ -68,7 +68,7 @@ resource "google_compute_instance" "host" {
 // allow ssh traffic
 resource "google_compute_firewall" "host" {
   // TODO: Fix firewall rules out of limits error
-  count = var.is_public ? 1 : 0
+  //count = var.is_public ? 1 : 0
 
   name          = "${var.name}-allow-ssh"
   target_tags   = var.instance_tags
