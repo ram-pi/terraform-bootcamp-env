@@ -70,12 +70,12 @@ resource "google_compute_firewall" "host" {
   // TODO: Fix firewall rules out of limits error
   //count = var.is_public ? 1 : 0
 
-  name          = "${var.name}-allow-ssh"
+  name          = "${var.name}-allow-all"
   target_tags   = var.instance_tags
   source_ranges = ["${var.ssh_from}/32"]
   network       = var.net
   allow {
     protocol = "tcp"
-    ports    = ["22"]
+    #ports    = ["22"]
   }
 }
